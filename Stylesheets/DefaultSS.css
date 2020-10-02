@@ -1,0 +1,145 @@
+﻿@font-face {
+    font-family: 'SourceSerif';
+    src: url(../Fonts/SourceSerifPro-Regular.ttf)
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url(../Fonts/calibri.ttf)
+}
+
+@font-face {
+    font-family: 'BoldCalibri';
+    src: url(../Fonts/calibrib.ttf)
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: url(../Images/BG1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: auto;
+}
+
+div.MainContainer {
+    width: 100%;
+    height: 250px;
+    background-color: rgba(0, 81, 81, .1);
+    margin: 0;
+    margin-top: 80px;
+    text-align: center;
+    transition: .3s;
+    color: #a7a7a7;
+}
+
+    div.MainContainer:hover {
+        border-radius: 70px;
+        background-color: rgba(154, 104, 12, .8);
+        color: white;
+    }
+
+p.MainHeader {
+    color: white;
+    font-size: 35px;
+    font-family: BoldCalibri;
+}
+
+p.MainBody {
+    font-size: 25px;
+    font-family: Calibri;
+    position: relative;
+    user-select: none;
+}
+
+img.SectionsImgs {
+    float: left;
+    position: relative;
+    left: 10px;
+    top: -70px;
+    border-radius: 25px;
+    height: calc(100% - 15px);
+}
+
+.DownloadButtonGD {
+    position: relative;
+    transition: .3s;
+    background-color: #001829;
+    width: 250px;
+    color: #bccfe3;
+    height: 110px;
+    box-sizing: border-box;
+}
+
+    .DownloadButtonGD:hover, .DownloadButtonGD:focus {
+        background-color: #001829;
+        border-radius: 15px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../Images/GoogleDrive.png);
+        color: transparent;
+        width: 110px;
+        box-sizing: border-box;
+    }
+
+    .DownloadButtonGD:active {
+        width: 110px;
+        background-color: darkred;
+        box-sizing: border-box;
+    }
+
+.DownloadButtonGH {
+    position: relative;
+    transition: .3s;
+    background-color: #001829;
+    width: 250px;
+    color: #bccfe3;
+    height: 110px;
+    box-sizing: border-box;
+}
+
+    .DownloadButtonGH:hover, .DownloadButtonGH:focus {
+        background-color: #001829;
+        border-radius: 15px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../Images/GitHub.png);
+        color: transparent;
+        width: 110px;
+        box-sizing: border-box;
+    }
+
+    .DownloadButtonGH:active {
+        width: 110px;
+        background-color: darkred;
+        box-sizing: border-box;
+    }
+
+.DownloadButton {
+    position: relative;
+    transition: .3s;
+    background-color: #001829;
+    width: 250px;
+    color: #bccfe3;
+    height: 110px;
+    box-sizing: border-box;
+}
+
+    .DownloadButton:hover, .DownloadButton:focus {
+        background-color: #001829;
+        border-radius: 15px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../Images/Download.png);
+        color: transparent;
+        width: 110px;
+        box-sizing: border-box;
+    }
+
+    .DownloadButton:active {
+        width: 110px;
+        background-color: darkred;
+        box-sizing: border-box;
+    }

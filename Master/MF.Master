@@ -1,0 +1,43 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ACBYTES</title>
+    <link rel="stylesheet" href="Master.css">
+</head>
+<body>
+        <div class="TopBar">
+            <input type="image" name="ctl00$ctl00" class="Logo" src="../Logos/ACBYTES250250.png" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;Default.html&quot;, false, false))">
+            <a class="Name">ACBYTES</a>
+            <a class="HyperLink" href="../ContactMe.html">Contact Me</a>
+            <a class="HyperLink" href="../Projects.html">Projects</a>
+            <a class="HyperLink" href="https://github.com/acbytes">GitHub</a>
+        </div>
+		
+		<div class="Footer">
+            <span id="lblFooter" class="FooterContent">© 2020 - 2020 Made by Alireza Shahbazi (ACBYTES)</span>
+        </div>
+<script>
+    function REMADS()
+    {
+        var elements = document.getElementsByTagName("div");
+        for (i = 0; i < elements.length; i++)
+        {
+            if (elements[i].style.backgroundColor == "transparent" || elements[i].style.opacity == 0.9 || elements[i].style.fontSize == "11pt" || elements[i].style.color == "White")
+            {
+                elements[i].parentNode.removeChild(elements[i]);
+            }
+        }
+        var b = document.getElementsByTagName("body");
+        for (i = 0; i < 3; i++)
+        {
+            b[0].removeChild(b[0].lastElementChild);
+        }
+    }
+	
+	function SetText()
+	{
+		var element = document.getElementById("lblFooter");
+		var dateI = new Date();
+		var year = dateI.getFullYear();
+		element.innerHTML = "© 2020 - " + year + " Made by Alireza Shahbazi (ACBYTES)";
+	}
+</script>
