@@ -26,7 +26,7 @@ function CloseNSMenu() {
 }
 
 function ShowDownloadDialog(){
-  if (confirm("Press OK if you'd like a direct download. Elseways, press cancel for a Google Drive download."))
+  if (confirm("Press OK if you'd like a direct download. Elseways, press Cancel for a Google Drive download."))
     window.open("Docs/AlirezaShahbazi(ACBYTES)sResume.pdf");
   else
     window.open("https://drive.google.com/file/d/1tNo8S9MOLZqShEnv4INX92bswKOcymxm/view?usp=sharing");
