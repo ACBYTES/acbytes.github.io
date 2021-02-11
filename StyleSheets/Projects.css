@@ -11,7 +11,6 @@
 }
 
 .sepRedirector h1{
-    position: relative;
     color: rgb(255, 255, 255);
     text-shadow: 5px 1px 5px rgb(0, 0, 0);
 }
@@ -21,7 +20,6 @@
     font-size: 20px;
     text-shadow: 5px 1px 5px rgb(0 0 0);
     font-family: Cabin;
-    position: relative;
 }
 
 p{
@@ -30,14 +28,6 @@ p{
 
 h2{
     font-size: xx-large;
-}
-
-.aRedirector{
-    text-decoration: none;
-    width: 70vw;
-    left: 50vw;
-    position: relative;
-    margin-left: -35vw;
 }
 
 .scImg{
