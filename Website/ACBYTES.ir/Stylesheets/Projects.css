@@ -1,0 +1,48 @@
+.cont{
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(20, 20, 20);
+    border-radius: 8px;
+    display: grid;
+}
+
+.sepRedirector{
+    height: fit-content;
+}
+
+.sepRedirector h1{
+    position: relative;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 1px 5px rgb(0, 0, 0);
+}
+
+.sepRedirector p{
+    word-break: keep-all;
+    font-size: 20px;
+    text-shadow: 5px 1px 5px rgb(0 0 0);
+    font-family: Cabin;
+}
+
+p{
+    user-select: none;
+}
+
+h2{
+    font-size: xx-large;
+}
+
+.aRedirector{
+    text-decoration: none;
+    width: 70vw;
+    left: 50vw;
+    position: relative;
+    margin-left: -35vw;
+}
+
+.scImg{
+    width: 250px;
+    height: 300px;
+    border-style: double;
+    border-color: black;
+    border-width: thick;
+}
