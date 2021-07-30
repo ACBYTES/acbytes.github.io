@@ -49,5 +49,11 @@ h2{
     background-size: cover;
     width: 145px;
     height: 62px;
-    border-radius: 10px; 
+    border-radius: 10px;
+    background: linear-gradient(to right, #000000ba, #000000cc), url(https://picsum.photos/1280/853/?random=1) no-repeat top center;
+    opacity: 0.2;
+}
+
+.btnGH img:hover,:focus,:active{
+    opacity: 1;
 }
