@@ -40,6 +40,10 @@ h2{
 }
 
 .btnGH{
+    outline: 0;
+}
+
+.btnGH img{
     margin: 12px;
     content:url("../Images/GitHub_Logo.png");
     background-size: cover;
