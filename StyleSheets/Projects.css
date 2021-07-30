@@ -45,11 +45,9 @@ h2{
 
 .btnGH img{
     margin: 12px;
-    content:url("../Images/GitHub_Logo.png");
+    content: url(../Images/GitHub_Logo.png);
     background-size: cover;
     width: 145px;
     height: 62px;
-    border: inherit;
-    border-color: grey;
-    border-radius: 10px;  
+    border-radius: 10px; 
 }
