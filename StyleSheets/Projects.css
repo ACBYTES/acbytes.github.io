@@ -38,3 +38,15 @@ h2{
     border-color: black;
     border-width: thick;
 }
+
+.btnGH{
+    margin: 12px;
+    background: url(../Images/GitHub_Logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 145px;
+    height: 62px;
+    border: inherit;
+    border-color: grey;
+    border-radius: 10px;  
+}
