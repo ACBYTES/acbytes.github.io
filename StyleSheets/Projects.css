@@ -41,8 +41,7 @@ h2{
 
 .btnGH{
     margin: 12px;
-    background: url(../Images/GitHub_Logo.png);
-    background-repeat: no-repeat;
+    content:url("../Images/GitHub_Logo.png");
     background-size: cover;
     width: 145px;
     height: 62px;
