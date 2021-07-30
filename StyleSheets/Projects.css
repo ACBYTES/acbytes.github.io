@@ -51,6 +51,7 @@ h2{
     height: 62px;
     border-radius: 10px;
     background: linear-gradient(to right, #000000ba, #000000cc), url(https://picsum.photos/1280/853/?random=1) no-repeat top center;
+    transition: .25s;
     opacity: 0.2;
 }
 
