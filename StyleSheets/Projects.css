@@ -50,7 +50,7 @@ h2{
     width: 145px;
     height: 62px;
     border-radius: 10px;
-    background: linear-gradient(to right, #000000ba, #000000cc) no-repeat top center;
+    background: linear-gradient(to right, #000000ba, #000000cc);
     transition: .25s;
     opacity: 0.2;
 }
