@@ -29,7 +29,7 @@ function ShowDownloadDialog(){
   if (confirm("Press OK if you'd like a direct download. Elseways, press Cancel for a Google Drive download."))
     window.open("Docs/AlirezaShahbazi(ACBYTES)sResume.pdf");
   else
-    window.open("https://drive.google.com/file/d/18ECSAYeFTaLMUh9K7crEcHYs3FhkO5U-/view?usp=sharing");
+    window.open("https://drive.google.com/file/d/1NhBWImC4lrhESamegETdSVZxgTDdhFLc/view?usp=sharing");
 }
 
 function UpdateTrackers(){
