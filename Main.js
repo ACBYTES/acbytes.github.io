@@ -1,7 +1,7 @@
 var csStart = new Date(2017, 10, 16, 12, 0, 0, 0);
-var cppStart = new Date(2018, 9, 20, 12, 0, 0, 0);
+var cppStart = new Date(2019, 1, 1, 12, 0, 0, 0);
 var unityStart = new Date(2017, 12, 11, 0, 0, 0, 0);
-var ue4Start = new Date(2018, 10, 1, 0, 0, 0, 0);
+var ue4Start = new Date(2019, 2, 1, 0, 0, 0, 0);
 
 function SetText()
 {
