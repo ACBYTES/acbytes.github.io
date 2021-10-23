@@ -197,7 +197,7 @@ div.TopBar {
     border: double;
     border-style: groove;
     border-color: black;
-    background-size: 1280px 715px;
+    background-size: cover;
 }
 
     .sepRedirector:hover, :active, :focus{
