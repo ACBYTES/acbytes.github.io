@@ -25,6 +25,7 @@ h2{
     left: 50vw;
     position: relative;
     margin-left: -35vw;
+    background-size: 1280px 715px;
 }
 
 #projectsP{
@@ -38,7 +39,6 @@ h2{
 
 #aboutP{
     background-image: url("../Images/AboutMe.jpg");
-    background-size: cover;
 }
 
 #aboutP:hover, #aboutP:active{
@@ -47,7 +47,6 @@ h2{
 
 #contactP{
     background-image: url("../Images/ContactMe.jpg");
-    background-size: cover;
 }
 
 #contactP:hover, #contactP:active{
@@ -65,7 +64,6 @@ h2{
 #resumeP{
     cursor: pointer;
     background-image: url("../Images/Resume.jpg");
-    background-size: cover;
 }
 
 #resumeP:hover, #resumeP:active{
