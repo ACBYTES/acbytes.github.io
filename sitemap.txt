@@ -1,0 +1,4 @@
+index.html
+about.html
+contact.html
+projects.html
