@@ -1,4 +1,4 @@
-index.html
-about.html
-contact.html
-projects.html
+https://www.acbytes.com/index.html
+https://www.acbytes.com/about.html
+https://www.acbytes.com/contact.html
+https://www.acbytes.com/projects.html
