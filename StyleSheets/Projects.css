@@ -44,11 +44,9 @@ h2 {
 }
 
 .redirector {
-    content: url(../Images/GitHub_Logo.png);
     outline: 0;
     margin: 12px;
     background-size: cover;
-    width: 145px;
     height: 62px;
     border-radius: 10px;
     background: linear-gradient(to right, #000000ba, #2b2b2bcc);
@@ -60,4 +58,12 @@ h2 {
 :focus,
 :active {
     opacity: 1;
+}
+
+.gitButton {
+    content: url(../Images/GitHub_Logo.png);
+}
+
+.blogButton {
+    content: url(../Images/article.svg);
 }
