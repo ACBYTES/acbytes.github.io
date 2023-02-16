@@ -1,4 +1,4 @@
-.cont{
+.cont {
     width: 100%;
     min-height: 100%;
     background-color: rgb(20, 20, 20);
@@ -6,36 +6,36 @@
     display: grid;
 }
 
-.sepRedirector{
+.sepRedirector {
     height: fit-content;
 }
 
-.sepRedirector h1{
+.sepRedirector h1 {
     color: rgb(255, 255, 255);
     text-shadow: 5px 1px 5px rgb(0, 0, 0);
     top: 0;
 }
 
-.sepRedirector p{
+.sepRedirector p {
     word-break: keep-all;
     font-size: 20px;
     text-shadow: 5px 1px 5px rgb(0 0 0);
     font-family: Cabin;
 }
 
-p{
+.sepRedirector a {
+    color: inherit;
+}
+
+p {
     user-select: none;
 }
 
-h2{
+h2 {
     font-size: xx-large;
 }
 
-a {
-    text-decoration: none;
-}
-
-.scImg{
+.scImg {
     width: 250px;
     height: 300px;
     border-style: double;
@@ -56,6 +56,8 @@ a {
     opacity: 0.2;
 }
 
-.redirector:hover,:focus,:active{
+.redirector:hover,
+:focus,
+:active {
     opacity: 1;
 }
