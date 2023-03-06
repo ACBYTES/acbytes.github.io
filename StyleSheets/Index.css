@@ -53,11 +53,11 @@ h2{
 }
 
 #docsP {
-    background-image: url("../Images/Docs.gif");
+    background-image: url("../Images/Docs.jpg");
 }
 
 #gitHubP:hover, #gitHubP:active{
-    background-image: url("../Images/Docs.jpg");
+    background-image: url("../Images/Docs.gif");
 }
 
 #gitHubP{
