@@ -56,7 +56,7 @@ h2{
     background-image: url("../Images/Docs.jpg");
 }
 
-#gitHubP:hover, #gitHubP:active{
+#docsP:hover, #docsP:active{
     background-image: url("../Images/Docs.gif");
 }
 
