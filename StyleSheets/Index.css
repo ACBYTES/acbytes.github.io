@@ -52,6 +52,14 @@ h2{
     background-image: url("../Images/ContactMe.gif");
 }
 
+#docsP {
+    background-image: url("../Images/Docs.gif");
+}
+
+#gitHubP:hover, #gitHubP:active{
+    background-image: url("../Images/Docs.jpg");
+}
+
 #gitHubP{
     background-image: url("../Images/SourceC.jpg");
 }
