@@ -7,7 +7,7 @@
 }
 
 .sepRedirector {
-    height: fit-content;
+    height: fit-content !important;
 }
 
 .sepRedirector h1 {
