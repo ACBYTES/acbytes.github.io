@@ -46,7 +46,7 @@ h2 {
 .redirector {
     display: inline-flex;
     padding: 10px 20px;
-    width: 15vw;
+    min-width: 15vw;
     background-color: #0b2330;
     color: #fff !important;
     border-radius: 10px;
