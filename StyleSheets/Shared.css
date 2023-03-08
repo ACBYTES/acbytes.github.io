@@ -8,6 +8,13 @@
   src: url("../Fonts/Cabin.ttf");
 }
 
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../Fonts/Anton.ttf");
+}
+
 html {
   width: 100%;
   height: 100%;
@@ -111,10 +118,9 @@ div.TopBar {
 
 .nsOverlayContent {
   position: relative;
-  top: 25%;
+  top: 18%;
   width: 100%;
   text-align: center;
-  margin-top: 30px;
 }
 
 .nsOverlay a {
@@ -190,15 +196,14 @@ div.TopBar {
 
 .sepRedirector {
   background-color: rgb(25, 25, 25);
-  border: groove;
   color: transparent;
   text-align: center;
   transition: .25s;
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: luminosity;
-  height: 150px;
-  margin-top: 10px;
+  height: fit-content;
+  min-height: 150px;
   margin: 10px;
   font-family: sans-serif;
   border: double;

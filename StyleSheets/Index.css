@@ -7,16 +7,14 @@
     align-content: center;
 }
 
-
-.sepRedirector h1{
-    top: 25%;
-    position: relative;
-    color: rgb(255, 255, 255);
-    text-shadow: 5px 1px 5px rgb(0, 0, 0);
-}
-
 h2{
     font-size: xx-large;
+}
+
+.sepRedirector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .aRedirector{

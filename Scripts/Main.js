@@ -12,7 +12,7 @@ function SetText()
 }
 
 function SetDefaultViews(){
-    document.body.innerHTML = "<div id=\"NSMenu\" class=\"nsOverlay\"><input type=\"button\" class=\"btnClose\" onclick=\"CloseNSMenu();\" value=\"&times;\"><div class=\"nsOverlayContent\"><a href=\"projects.html\">Projects</a><a href=\"about.html\">About Me</a><a href=\"contact.html\">Contact Me</a><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/acbytes\">GitHub</a><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://linkedin.com/in/acbytes\">LinkedIn</a></div></div> <div class=\"TopBar\"><a href=\"index.html\"><input type=\"image\" class=\"BarLogo\" src=\"Logos/ACBYTES250250.png\"></a><a></a><a class=\"BarName\">ACBYTES</a> <input id=\"btnOpenNSMenu\" type=\"button\" value=\"☰\" onclick=\"OpenNSMenu();\"></div>" + document.body.innerHTML + "<div class=\"Footer\"><span id=\"lblFooter\" class=\"FooterContent\"></span></div>";
+    document.body.innerHTML = "<div id=\"NSMenu\" class=\"nsOverlay\"><input type=\"button\" class=\"btnClose\" onclick=\"CloseNSMenu();\" value=\"&times;\"><div class=\"nsOverlayContent\"><a href=\"projects.html\">Projects</a><a href=\"about.html\">About Me</a><a href=\"contact.html\">Contact Me</a><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://docs.acbytes.com\">Docs</a><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/acbytes\">GitHub</a><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://linkedin.com/in/acbytes\">LinkedIn</a></div></div> <div class=\"TopBar\"><a href=\"index.html\"><input type=\"image\" class=\"BarLogo\" src=\"Logos/ACBYTES250250.png\"></a><a></a><a class=\"BarName\">ACBYTES</a> <input id=\"btnOpenNSMenu\" type=\"button\" value=\"☰\" onclick=\"OpenNSMenu();\"></div>" + document.body.innerHTML + "<div class=\"Footer\"><span id=\"lblFooter\" class=\"FooterContent\"></span></div>";
     document.head.innerHTML += "<link href=\"StyleSheets/Shared.css\" rel=\"stylesheet\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=0.6\">";
     SetText();
 }
@@ -25,11 +25,8 @@ function CloseNSMenu() {
     document.getElementById("NSMenu").style.width = "0%";
 }
 
-function ShowDownloadDialog(){
-  if (confirm("Press OK if you'd like a direct download. Elseways, press Cancel for a Google Drive download."))
+function GetResume(){
     window.open("Docs/AlirezaShahbazi(ACBYTES)sResume.pdf");
-  else
-    window.open("https://drive.google.com/file/d/1vH9YWVkfccOc_0Zz8AXq_5DMh1eTRBVz/view?usp=drivesdk");
 }
 
 function UpdateTrackers(){

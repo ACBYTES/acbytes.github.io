@@ -7,7 +7,7 @@
 }
 
 .sepRedirector {
-    height: fit-content !important;
+    min-height: fit-content !important;
 }
 
 .sepRedirector h1 {
@@ -44,14 +44,24 @@ h2 {
 }
 
 .redirector {
+    display: inline-flex;
+    padding: 10px 20px;
+    width: 15vw;
+    background-color: #0b2330;
+    color: #fff !important;
+    border-radius: 10px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
     outline: 0;
     margin: 12px;
-    background-size: cover;
+    background-size: 2vw;
     height: 62px;
-    border-radius: 10px;
-    background: linear-gradient(to right, #000000ba, #2b2b2bcc);
     transition: .25s;
-    opacity: 0.2;
+    opacity: 0.5;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
 }
 
 .redirector:hover,
