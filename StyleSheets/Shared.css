@@ -196,7 +196,8 @@ div.TopBar {
 
 .sepRedirector {
   background-color: rgb(25, 25, 25);
-  color: transparent;
+  /* color: transparent; */
+  color: #c9c9c9;
   text-align: center;
   transition: .25s;
   background-position: center;
@@ -212,11 +213,11 @@ div.TopBar {
   background-size: cover;
 }
 
-.sepRedirector:hover,
+/* .sepRedirector:hover,
 :active,
 :focus {
   color: white;
-}
+} */
 
 .sepRedirector h1 {
   top: 25%;
