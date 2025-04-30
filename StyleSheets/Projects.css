@@ -77,3 +77,56 @@ h2 {
 .blogButton {
     content: url(../Images/article.svg);
 }
+
+/* READ MORE */
+
+.read-more-container {
+    overflow: hidden;
+    max-height: 0; /* Initially collapsed */
+    transition: max-height 0.5s; /* Smooth transition */
+  }
+
+  .read-more-container hr {
+    border-color: #303030;
+  }
+
+  .read-more-container.expanded {
+    max-height: 1000px; /* Sufficiently large to fit all content */
+  }
+
+  .read-more-btn {
+    margin-top: 0.5em;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 0;
+  }
+
+  .tech-stack {
+    display: flex;
+    align-items: center;
+    place-self: center;
+    flex-direction: row;
+  }
+
+  .highlights {
+    font-family: Cabin;
+    list-style: none;
+    padding: 0;
+  }
+
+  .highlights > li {
+    margin: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .highlights h3 {
+    margin: 0;
+  }
+
+  .highlights span {
+    font-size: 1rem;
+  }

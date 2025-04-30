@@ -85,3 +85,9 @@ function SubDates(D, D1)
 
     return { 0: yDiff, 1: mDiff, 2: dDiff, 3: hDiff, 4: minDiff, 5: secDiff };
 }
+
+function toggleReadMore(button) {
+    const container = button.previousElementSibling;
+    container.classList.toggle('expanded');
+    button.textContent = container.classList.contains('expanded') ? 'Read less' : 'Read more...';
+  }
