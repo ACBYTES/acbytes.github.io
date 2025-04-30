@@ -107,9 +107,12 @@ h2 {
 
   .tech-stack {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     place-self: center;
     flex-direction: row;
+    max-width: 100%;
   }
 
   .highlights {
