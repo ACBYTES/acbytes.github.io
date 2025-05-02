@@ -91,7 +91,7 @@ h2 {
   }
 
   .read-more-container.expanded {
-    max-height: 1000px; /* Sufficiently large to fit all content */
+    max-height: 3000px; /* Sufficiently large to fit all content */
   }
 
   .read-more-btn {
