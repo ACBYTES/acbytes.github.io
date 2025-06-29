@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.network-bg {
+  background: radial-gradient(circle at 20% 50%, rgba(0, 182, 205, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 182, 205, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(0, 182, 205, 0.05) 0%, transparent 50%);
+}
+
+.glass-nav {
+  backdrop-filter: blur(12px);
+  background: rgba(9, 9, 11, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #00b6cd 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
