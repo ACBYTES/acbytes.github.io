@@ -144,15 +144,15 @@ export function AboutSection() {
                   which means our team can now focus on more important, strategic work. We're saving more than 10 hours a day across the board, 
                   and it’s made a huge difference."
                 </blockquote>
-                <div className="flex items-center space-x-4">
+                {/* <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
                     <Users className="h-6 w-6 text-primary" />
                   </div>
-                  {/* <div>
+                  <div>
                     <p className="font-semibold">BFC Inc.</p>
                     <p className="text-gray-400 text-sm">A Financial Services Company</p>
-                  </div> */}
-                </div>
+                  </div>
+                </div> */}
               </CardContent>
             </Card>
           </div>
