@@ -1,3 +1,5 @@
+'use client';
+
 import { Navbar } from "@/components/navbar"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -35,7 +37,6 @@ const teamMembers = [
     linkedin: "#",
   },
 ]
-
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -61,21 +62,29 @@ export default function ContactPage() {
                   Fill out the form below and we'll schedule a free consultation to analyze your automation potential.
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Input placeholder="First Name" className="bg-gray-800 border-gray-700" />
-                  <Input placeholder="Last Name" className="bg-gray-800 border-gray-700" />
-                </div>
-                <Input placeholder="Email Address" type="email" className="bg-gray-800 border-gray-700" />
-                <Input placeholder="Company Name" className="bg-gray-800 border-gray-700" />
-                <Input placeholder="Phone Number" className="bg-gray-800 border-gray-700" />
-                <Textarea
-                  placeholder="Tell us about your current manual processes and what you'd like to automate..."
-                  className="bg-gray-800 border-gray-700 min-h-[120px]"
-                />
-                <Button className="w-full bg-primary hover:bg-primary/90 text-black font-semibold">
-                  Schedule Consultation At No Cost
-                </Button>
+              <CardContent>
+                <form className="space-y-4" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfn8qQcIYLzCsf2Nw3g4A1WrTTAu9wo35JcBEzsDuupkfl-zA/formResponse"
+                  method="POST" target="hidden_iframe" onSubmit={() => alert("Success")}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <Input name="entry.1484754187" type="text" required={true} placeholder="First Name*" className="bg-gray-800 border-gray-700" />
+                    <Input name="entry.1473841677" type="text" required={false} placeholder="Last Name" className="bg-gray-800 border-gray-700" />
+                  </div>
+                  <Input name="entry.1278843840" type="email" required={true} placeholder="Email Address*" className="bg-gray-800 border-gray-700" />
+                  <Input name="entry.1802342268" required={true} type="text" placeholder="Company Name*" className="bg-gray-800 border-gray-700" />
+                  <Input name="entry.53388809" required={true} type="tel" pattern="^\+\d{8,15}$" placeholder="+12345678900*" className="bg-gray-800 border-gray-700" />
+                  <Textarea
+                    name="entry.1311724580"
+                    required={true}
+                    placeholder="Tell us about your current manual processes and what you'd like to automate...*"
+                    className="bg-gray-800 border-gray-700 min-h-[120px]"
+                  />
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-black font-semibold">
+                    Schedule Consultation At No Cost
+                  </Button>
+                </form>
+              <iframe
+              name="hidden_iframe"
+              style={{ display: "none !important", height: "0", maxHeight: "0" }}></iframe>
               </CardContent>
             </Card>
 
@@ -112,31 +121,31 @@ export default function ContactPage() {
                     </li>
                     <li>
                       <div className="flex items-center space-x-3">
-                          <DollarSign className="h-5 w-5 text-primary" />
+                        <DollarSign className="h-5 w-5 text-primary" />
                         <span>Initial consultation and analysis at no cost</span>
                       </div>
                     </li>
                     <li>
                       <div className="flex items-center space-x-3">
-                          <BriefcaseBusiness className="h-5 w-5 text-primary" />
+                        <BriefcaseBusiness className="h-5 w-5 text-primary" />
                         <span>Proven track record with companies in different industries</span>
                       </div>
                     </li>
                     <li>
                       <div className="flex items-center space-x-3">
-                          <Filter className="h-5 w-5 text-primary" />
+                        <Filter className="h-5 w-5 text-primary" />
                         <span>Average 70% reduction in manual workload</span>
                       </div>
                     </li>
                     <li>
                       <div className="flex items-center space-x-3">
-                          <Library className="h-5 w-5 text-primary" />
+                        <Library className="h-5 w-5 text-primary" />
                         <span>Custom solutions tailored to your needs</span>
                       </div>
                     </li>
                     <li>
                       <div className="flex items-center space-x-3">
-                          <HelpingHand className="h-5 w-5 text-primary" />
+                        <HelpingHand className="h-5 w-5 text-primary" />
                         <span>Ongoing support and optimization</span>
                       </div>
                     </li>
