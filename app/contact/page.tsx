@@ -1,11 +1,13 @@
 'use client';
 
+import { useState, useRef } from "react";
 import { Navbar } from "@/components/navbar"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin, Eye, DollarSign, BriefcaseBusiness, Filter, HelpingHand, Library } from "lucide-react"
+import { AnimatedSuccessDialog } from "@/components/consultation-request-success-dialog"
 
 const teamMembers = [
   {
@@ -38,6 +40,66 @@ const teamMembers = [
   },
 ]
 export default function ContactPage() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const form = formRef.current;
+    if (!form)
+      return;
+
+    if (!form.checkValidity())
+      return;
+
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries()) as Record<string, string>;
+    console.log(data);
+
+    try {
+      setLoading(true);
+      const googleFormUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfn8qQcIYLzCsf2Nw3g4A1WrTTAu9wo35JcBEzsDuupkfl-zA/formResponse";
+
+      const formData = new URLSearchParams();
+      formData.append("entry.1484754187", data["firstName"]);
+      formData.append("entry.1473841677", data["lastName"]);
+      formData.append("entry.1278843840", data["email"]);
+      formData.append("entry.1802342268", data["company"]);
+      formData.append("entry.53388809", data["phone"]);
+      formData.append("entry.1311724580", data["message"]);
+
+      const res = await fetch(googleFormUrl, {
+        method: "POST",
+        mode: "no-cors", // required to bypass CORS, but it disables response visibility
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: formData.toString(),
+      });
+
+      // const result = await res.json();
+
+      setOpen(true);
+      form.reset();
+
+      // if (result.success) {
+      //   setOpen(true);
+      //   form.reset(); // reset after successful submit
+      // }
+      // else {
+      //   alert("Something went wrong. Please try again.");
+      // }
+    }
+    catch (err) {
+      alert("Error submitting form.");
+    }
+    finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
@@ -63,30 +125,32 @@ export default function ContactPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-4" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfn8qQcIYLzCsf2Nw3g4A1WrTTAu9wo35JcBEzsDuupkfl-zA/formResponse"
-                  method="POST" target="hidden_iframe" onSubmit={() => alert("Success")}>
+                <form ref={formRef} className="space-y-4"
+                  method="POST" target="hidden_iframe" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <Input name="entry.1484754187" type="text" required={true} placeholder="First Name*" className="bg-gray-800 border-gray-700" />
-                    <Input name="entry.1473841677" type="text" required={false} placeholder="Last Name" className="bg-gray-800 border-gray-700" />
+                    <Input name="firstName" type="text" required={true} placeholder="First Name*" className="bg-gray-800 border-gray-700" />
+                    <Input name="lastName" type="text" required={false} placeholder="Last Name" className="bg-gray-800 border-gray-700" />
                   </div>
-                  <Input name="entry.1278843840" type="email" required={true} placeholder="Email Address*" className="bg-gray-800 border-gray-700" />
-                  <Input name="entry.1802342268" required={true} type="text" placeholder="Company Name*" className="bg-gray-800 border-gray-700" />
-                  <Input name="entry.53388809" required={true} type="tel" pattern="^\+\d{8,15}$" placeholder="+12345678900*" className="bg-gray-800 border-gray-700" />
+                  <Input name="email" type="email" required={true} placeholder="Email Address*" className="bg-gray-800 border-gray-700" />
+                  <Input name="company" required={true} type="text" placeholder="Company Name*" className="bg-gray-800 border-gray-700" />
+                  <Input name="phone" required={true} type="tel" pattern="^\+\d{8,15}$" placeholder="+12345678900*" className="bg-gray-800 border-gray-700" />
                   <Textarea
-                    name="entry.1311724580"
+                    name="message"
                     required={true}
                     placeholder="Tell us about your current manual processes and what you'd like to automate...*"
                     className="bg-gray-800 border-gray-700 min-h-[120px]"
                   />
                   <Button className="w-full bg-primary hover:bg-primary/90 text-black font-semibold">
-                    Schedule Consultation At No Cost
+                    {loading ? "Sending..." : "Schedule Consultation At No Cost"}
                   </Button>
                 </form>
-              <iframe
-              name="hidden_iframe"
-              style={{ display: "none !important", height: "0", maxHeight: "0" }}></iframe>
+                <iframe
+                  name="hidden_iframe"
+                  style={{ display: "none !important", height: "0", maxHeight: "0" }}></iframe>
               </CardContent>
             </Card>
+
+            <AnimatedSuccessDialog open={open} setOpen={setOpen}></AnimatedSuccessDialog>
 
             <div className="space-y-8">
               <Card className="bg-gray-900/50 border-gray-800">
