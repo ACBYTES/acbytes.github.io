@@ -60,9 +60,11 @@ export function Navbar() {
               <Link href="/contact" className="block px-3 py-2 text-gray-300 hover:text-primary">
                 Contact
               </Link>
-              <Button className="w-full mt-2 bg-primary hover:bg-primary/90 text-black font-semibold">
-                Start Automating
-              </Button>
+              <Link href="/contact">
+                <Button className="w-full mt-2 bg-primary hover:bg-primary/90 text-black font-semibold">
+                  Start Automating
+                </Button>
+              </Link>
             </div>
           </div>
         )}
