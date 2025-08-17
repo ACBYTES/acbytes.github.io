@@ -26,10 +26,10 @@ jobs:
     - name: Build
       run: npm run build
 
-    # Copy static folders to `out/`
-    - name: Copy static folders to out/
-      run: |
-        cp -r ./Software ./out/
+    # # Copy static folders to `out/`
+    # - name: Copy static folders to out/
+    #   run: |
+    #     cp -r ./Software ./out/
 
     # Copy sitemap.txt to `out/`
     - name: Copy sitemap.txt to out/
