@@ -290,7 +290,7 @@ export const projectsData: Project[] = [
   },
   {
     title: "Administration Telegram Bot",
-    company: "ERG Wealth Inc.",
+    company: "EG Wealth Inc.",
     description: "Developing an entire administration Telegram bot to manage team members, aid clients with accessing required information at any time, and guide new members with their progress in a new industry.",
     techStack: ["C#", "Telegram API", "LiteDB"],
     category: "Tracking/Content Automation",
