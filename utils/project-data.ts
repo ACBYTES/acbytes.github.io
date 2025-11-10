@@ -7,6 +7,7 @@ export interface ProjectDetail {
 
 export interface Project {
   title: string
+  href?: string
   company: string
   description: string
   techStack: string[]
@@ -19,6 +20,7 @@ export interface Project {
 export const projectsData: Project[] = [
   {
     title: "ParagonProfessionals.ca",
+    href: "https://paragonprofessionals.ca",
     company: "Boushehri Financial Consulting",
     description:
       "A robust platform supporting over 1,000 users at Boushehri Financial Consulting, designed to streamline operations, enhance content management, and track team progress.",
@@ -104,6 +106,18 @@ export const projectsData: Project[] = [
           "Built an admin interface for viewing background task status, last run timestamps, and triggering manual reruns if needed."
         ],
       }
+    ],
+  },
+  {
+    title: "MoneyEX.ca",
+    href: "https://moneyex.ca",
+    company: "MoneyEX Inc.",
+    description: "An eye-catching website with numerous administration and comparison tools, that successfully increased the sales and eased the rate comparison for MoneyEX exchange clients.",
+    techStack: ["C#", "ASP.NET Razor", "MS-SQL"],
+    category: "Website & Admin Platform",
+    savings: "5× more leads",
+    icon: "Globe",
+    details: [
     ],
   },
   {

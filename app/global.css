@@ -54,3 +54,26 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+@media screen and (max-width: 768px) {
+  .project-tdd-div {
+    height: 20%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .project-ti-div {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  div[role="dialog"] {
+    overflow: hidden;
+  }
+
+  .diag-scr-area {
+    height: fit-content !important;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+}

@@ -5,7 +5,7 @@ import { Navbar } from "@/components/navbar"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { FileText, Database, Cpu, Workflow, Settings, Bot, Book, LayoutDashboard } from "lucide-react"
+import { FileText, Database, Cpu, Workflow, Settings, Bot, Book, LayoutDashboard, Globe } from "lucide-react"
 import { getTechIcon } from "@/utils/tech-icons"
 import { ProjectDetailModal } from "@/components/project-detail-modal"
 import { projectsData, type Project } from "@/utils/project-data"
@@ -51,12 +51,12 @@ export default function ProjectsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style={{gridAutoRows: "1fr"}}>
             {projectsData.map((project, index) => { const IconComponent = iconMap[project.icon as keyof typeof iconMap] || iconMap.Cpu
                return (
               <Card
                 key={index}
-                className="bg-gray-900/50 border-gray-800 hover:border-primary/50 transition-all duration-300 group"
+                className="bg-gray-900/50 border-gray-800 hover:border-primary/50 transition-all duration-300 group flex flex-col"
               >
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
@@ -67,7 +67,7 @@ export default function ProjectsPage() {
                       {project.savings}
                     </Badge>
                   </div>
-                  <CardTitle className="text-xl group-hover:text-primary transition-colors">{project.title}</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors"><a href={project.href} target="_blank">{project.title}</a></CardTitle>
                   <CardDescription className="text-gray-400">
                     <span className="font-semibold text-primary">{project.company}</span> • {project.category}
                   </CardDescription>
@@ -91,16 +91,17 @@ export default function ProjectsPage() {
                       ))}
                     </div>
                   </div>
-
+                </CardContent>
                     <Button
+                      disabled={ project.details.length == 0 }
                       onClick={() => handleViewDetails(project)}
                       variant="outline"
-                      className="w-full border-primary/50 text-primary hover:bg-primary/10"
+                      className="w-full border-primary/50 text-primary hover:bg-primary/10 mb-4"
+                      style={{marginTop: "auto", width: "95%", alignSelf: "center"}}
                     >
                       View Technical Details
                       <FileText className="ml-2 h-4 w-4" />
                     </Button>
-                </CardContent>
               </Card>
             )})}
           </div>

@@ -46,7 +46,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
 
         <div className="flex flex-col lg:flex-row gap-6 h-full">
           {/* Navigation Tabs */}
-          <div className="lg:w-1/3">
+          <div className="lg:w-1/3 project-tdd-div">
             <h3 className="text-lg font-semibold mb-4 text-primary">Technical Deep Dive</h3>
             <div className="space-y-2">
               {project.details.map((detail, index) => (
@@ -66,7 +66,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
           </div>
 
           {/* Content Area */}
-          <div className="lg:w-2/3">
+          <div className="lg:w-2/3 project-ti-div">
             <ScrollArea className="h-[60vh] pr-4">
               {project.details[activeTab] && (
                 <div className="space-y-6">
@@ -112,7 +112,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
         <div className="border-t border-gray-800 pt-4 mt-4">
           <div className="flex items-center justify-between">
             <div className="text-sm text-gray-400">
-              Time Saved: <span className="text-primary font-semibold">{project.savings}</span>
+              <span className="text-primary font-semibold">{project.savings}</span>
             </div>
             <Button onClick={onClose} className="bg-primary hover:bg-primary/90 text-black">
               Close Details
